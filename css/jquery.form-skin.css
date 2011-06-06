@@ -1,0 +1,32 @@
+
+/* Form skinning */
+.ui-checkbox, .ui-radio {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	background: #fff url(../images/bg_form_skin_sprites.png) no-repeat;
+}
+
+.ui-checkbox {
+	background-position: 0 -50px;
+}
+.ui-radio {
+	width: 21px;
+	height: 21px;
+	background-position: 0 0;
+}
+
+.ui-checkbox:focus, .ui-radio:focus {
+	/*outline: none;*/
+}
+
+.ui-checkbox.ui-checked {
+	background-color: #7BC31E;
+	background-position: -25px -50px;
+}
+.ui-radio.ui-checked {
+	background-color: #7BC31E;
+	background-position: -25px 0;
+}
+
