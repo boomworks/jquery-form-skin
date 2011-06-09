@@ -11,7 +11,7 @@
 	$.fn.skin = function(opts){
 
 		// Merge user supplied options with defaults
-		var options = $.extend({}, $.fn.labelOverlay.defaults, opts);
+		var options = $.extend({}, $.fn.skin.defaults, opts);
 
 		this.each(function(){
 
