@@ -31,9 +31,8 @@
 
 /* Selects */
 .ui-select {
+	display: inline-block;
 	position: relative;
-	float: left;
-	clear: none;
 	margin-right: 10px;
 	color: #000;
 	background: url(../images/form_skin_sprites.png) no-repeat 0 -100px;
