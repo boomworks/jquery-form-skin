@@ -68,7 +68,7 @@
 
 			// Bind various events to target field
 			$skinned
-				.bind('now click keydown', function(e){
+				.bind('now click ui:click keydown ui:keydown', function(e){
 					switch(type){
 						case 'checkbox':
 							handle_checkbox_events($this, $skinned, e);
@@ -82,7 +82,7 @@
 					}
 				})
 
-				.bind('focus', function(e){
+				.bind('focus ui:focus', function(e){
 					switch(type){
 						case 'radio':
 							handle_radio_focus($this, $skinned, e);
