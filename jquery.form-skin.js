@@ -13,6 +13,8 @@
 		// Merge user supplied options with defaults
 		var options = $.extend({}, $.fn.skin.defaults, opts);
 
+		$.fn.skin.options = options;
+
 		this.each(function(){
 
 			var $this = $(this),
@@ -69,6 +71,7 @@
 			// Bind various events to target field
 			$skinned
 				.bind('now click ui:click keydown ui:keydown', function(e){
+
 					switch(type){
 						case 'checkbox':
 							handle_checkbox_events($this, $skinned, e);
@@ -76,11 +79,9 @@
 							break;
 						case 'radio':
 							handle_radio_events($this, $skinned, e);
-							options.change.call($this, $skinned);
 							break;
 						case 'select':
 							handle_select_events($this, $skinned, e);
-							options.change.call($this, $skinned);
 							break;
 					}
 				})
@@ -294,6 +295,11 @@
 				.removeClass('ui-checked')
 				.attr('aria-checked', 'false')
 			;
+
+			$skinned_group.each(function(){
+				$.fn.skin.options.change.call($('#' + $(this).attr('data-for')), $(this));
+			});
+
 		}
 
 		// Set class & attributes based on state			

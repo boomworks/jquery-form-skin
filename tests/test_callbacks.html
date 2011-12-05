@@ -79,7 +79,7 @@
 	<script src="../jquery.form-skin.js"></script>
 	<script>
 
-	$('.skin-me').skin({change: function(){
+	$('.skin-me').skin({change: function($skinned){
 		var $this = $(this);
 		if($this.is(':checked')){
 			$this.parents('label').addClass('selected');
