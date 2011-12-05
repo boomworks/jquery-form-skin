@@ -72,12 +72,15 @@
 					switch(type){
 						case 'checkbox':
 							handle_checkbox_events($this, $skinned, e);
+							options.change.call($this, $skinned);
 							break;
 						case 'radio':
 							handle_radio_events($this, $skinned, e);
+							options.change.call($this, $skinned);
 							break;
 						case 'select':
 							handle_select_events($this, $skinned, e);
+							options.change.call($this, $skinned);
 							break;
 					}
 				})
@@ -473,6 +476,7 @@
 
 	// Default settings
 	$.fn.skin.defaults = {
+		change: function(){}
 	};
 
 })(jQuery);
