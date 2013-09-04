@@ -100,7 +100,7 @@
 
 			// Bind click to associated label
 			// FIXME: Is propagating in IE7
-			$('label[for=' + $this.attr('id') + ']')
+			$('label[for="' + $this.attr('id') + '"]')
 				.removeAttr('for')
 				.bind('click', function(e){
 					e.preventDefault();
